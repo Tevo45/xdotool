@@ -8,3 +8,9 @@ if [ $? -eq 0 ] ; then
     echo "-DMISSING_CLOCK_GETTIME"
   fi
 fi
+
+os=`uname`
+if [ $os -eq "SunOS" ] ; then
+  echo "-D__EXTENSIONS__"
+fi
+
